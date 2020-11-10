@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/com.css">
+    <title>用户评论留言</title>
+</head>
+<body>
+    <div class="main">
+        <h3 class="header">用户评论留言区</h3>
+        <form action="/home/com" id="com_form" method="post">
+            <div class="form-group">
+                <label for="title">标题</label>
+                <input type="text" class="form-control" name="title" placeholder="请输入标题" autofocus>
+            </div>
+            <div class="form-group">
+                <label for="comment">评论</label>
+                <input type="text" class="form-control" name="comment" placeholder="请输入评论内容">
+            </div>
+            <button type="submit" class="btn btn-success btn-block">上传</button>
+        </form>
+
+    </div>
+</body>
+</html>

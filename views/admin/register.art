@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <title>用户注册</title>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <a href="/">
+                <img src="" alt="">
+            </a>
+            <h2>用户注册</h2>
+        </div>
+        <form id="register_form" action="/admin/register" method="post">
+            <div class="form-group">
+                <label for="telphone">手机号</label>
+                <input type="text" class="form-control" id="telphone" name="telphone" placeholder="Telephone" autofocus>
+            </div>
+            <div class="form-group">
+                <label for="nickname">用户名</label>
+                <input type="text" class="form-control" id="nickname" name="nickname" placeholder="Nickname">
+            </div>
+            <div class="form-group">
+                <label for="password">密码</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="password1">请再次输入密码</label>
+                <input type="password" class="form-control" id="pass_word" name="pass_word" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-success btn-block">注册</button>
+        </form>
+        <div class="message">
+            <p>已有账号? <a href="/admin/login">点击登录</a>.</p>
+        </div>
+    </div>
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/js/common.js" ></script>
+    <script type="text/javascript">
+    $('#register_form').on('submit', function (e) {
+        e.preventDefault()
+        var formData = serializeToJson($(this));
+        if(formData.telphone.trim().length == 0){
+            alert('请输入手机号码');
+            // 阻止程序向下执行
+            return false;
+        }
+        if(formData.nickname.trim().length == 0){
+            alert('请输入昵称');
+            // 阻止程序向下执行
+            return false;
+        }
+        // 如果用户没有输入密码
+        if(formData.password.trim().length == 0){
+            alert('请输入密码');
+            // 阻止程序向下执行
+            return false;
+        }
+        if(formData.pass_word.trim() !== formData.password.trim()){
+            alert('两次输入的密码不一致，请重新输入');
+            // 阻止程序向下执行
+            return false;
+        }
+        $.ajax({
+            url: '/admin/register',
+            type: 'post',
+            data: formData,
+            dataType: 'json',
+            success: function (data) {
+                var err_code = data.err_code
+                if (err_code === 0) {
+                 // window.alert('注册成功！')
+                 // 服务端重定向针对异步请求无效
+                   window.location.href = '/home/u'
+                } else if (err_code === 1) {
+                    window.alert('手机号或昵称已存在！请直接登录')
+                } else if (err_code === 500) {
+                    window.alert('服务器忙，请稍后重试！')
+                }
+            }
+         })
+    })
+    </script>
+</body>
+</html>
+

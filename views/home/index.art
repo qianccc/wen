@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- IE6 7 8 针对html5新标签及媒体查询的解决方案 -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>首页</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <header class="col-md-2">
+                <div class="logo">
+                    <a href="#">
+                        <img src="/images/lg.jpg" alt="">
+                    </a>
+                </div>
+                <!-- <div class="btnn">
+                    <button type="button" class="btn btn-outline-secondary">注册</button>
+                    <button type="button" class="btn btn-outline-secondary">登录</button>
+                </div> -->
+                <div class="nav">
+                    <button type="button" class="btn btn-outline-secondary"><a href="/admin/register">注册</a></button>
+                    <button type="button" class="btn btn-outline-secondary"><a href="/admin/login">登录</a></button>
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">足球</a></li>
+                        <li><a href="#">篮球</a></li>
+                        <li><a href="#">综合</a></li>
+                        <li><a href="#">图片</a></li>
+                    </ul>
+                </div>
+            </header>
+            <article class="col-md-7">
+                <div class="titnews clearfix">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="/images/news1001.jpg" alt="">
+                                <p>新冠疫情已殃及巴黎奥运会，计划被打乱</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/images/news1002.jpg" alt="">
+                                <p>东京站电子钟开始奥运会倒计时</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/images/news1003.jpg" alt="">
+                                <p>辽篮球迷向白衣英雄赠送郭艾伦签名队服</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/images/news1004.jpg" alt="">
+                                <p>上港3外援包机，“压哨”抵达中国</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/images/news1005.jpg" alt="">
+                                <p>NBA第四位康复。斯玛特已从新冠肺炎中痊愈</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="newslist">
+                    <div class="row">
+                        <div class="col-sm-9 nls">
+                            <h3>日奥运“行贿”账户曝光 奥组委高官支取千万美元</h3>
+                            <p class="text-muted">发布于2020/4/1</p>
+                            <p class="hidden-xs">在外界披露东京奥运申办丑闻，导致日本奥委会主席竹田恒和去年6月下台后。路透社在昨天进一步披露了东京申办奥运会的“行贿”数额。</p>
+                        </div>
+                        <div class="col-sm-3 pic hidden-xs">
+                            <a href="#">
+                                <img src="/images/newslist1.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-9 nls">
+                            <h3>NBA新冠疫情汇总 湖人全队完成14天隔离</h3>
+                            <p class="text-muted">发布于2020/4/1</p>
+                            <p class="hidden-xs">北京时间4月1日，据美媒体报道，洛杉矶湖人队今天宣布他们的所有球员都已经完成了14天的隔离，而且所有球员都已经没有新冠病毒的症状。</p>
+                        </div>
+                        <div class="col-sm-3 pic hidden-xs">
+                            <a href="#">
+                                <img src="/images/newslist2.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-9 nls">
+                            <h3>德媒：施蒂利克家人新冠检测呈阳性</h3>
+                            <p class="text-muted">发布于2020/4/1</p>
+                            <p class="hidden-xs">北京时间3月31日，据德国媒体报道，泰达主帅施蒂利克的家人新冠病毒检测呈阳性，老帅需要隔离14天，直到4月7日。</p>
+                        </div>
+                        <div class="col-sm-3 pic hidden-xs">
+                            <a href="#">
+                                <img src="/images/newslist3.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-9 nls">
+                            <h3>外援隔离期"闹事" CBA复赛会受影响吗？</h3>
+                            <p class="text-muted">发布于2020/3/31</p>
+                            <p class="hidden-xs">昨日，南京同曦俱乐部外援约瑟夫-杨在隔离酒店闹事的事件被曝出，尽管俱乐部责成外援做出了道歉，但会不会导致无法预知的复赛时间再次被推迟，业内众说纷纭。</p>
+                        </div>
+                        <div class="col-sm-3 pic hidden-xs">
+                            <a href="#">
+                                <img src="/images/newslist4.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <aside class="col-md-3">
+                <a href="#" class="comarea">
+                    <img src="/images/comment.jpg" alt="">
+                </a>
+                <a href="#" class="hot">
+                    <span class="btn btn-warning">热门评论</span>
+                    <h4 class="text-warning">社区论战 与你的兄弟一起</h4>
+                    <p>收录一切精彩评论留言，搞快点，你就是小天才</p>
+                </a>
+            </aside>
+        </div>
+    </div>
+</body>
+</html>
